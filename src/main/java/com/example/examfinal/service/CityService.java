@@ -5,6 +5,7 @@ import com.example.examfinal.model.service.CityAddServiceModel;
 import com.example.examfinal.model.service.CityUpdateServiceModel;
 import com.example.examfinal.model.view.CityDetailsView;
 import com.example.examfinal.model.view.CityView;
+import com.example.examfinal.model.view.PlaceViewModel;
 
 import java.util.List;
 

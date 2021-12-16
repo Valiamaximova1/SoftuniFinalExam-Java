@@ -11,7 +11,7 @@
 
         <div id="memes" >
             <section class="col-lg-6 mb-lg-0 mb-5">
-                <div th:each="c : ${restaurants}" th:object="${c}"  class="tm-intro" >
+                <div th:each="c : ${restaurantsAll}" th:object="${c}"  class="tm-intro" >
                     <h3 class="tm-title-gray mb-4" th:text="|Name: *{name}|">Name</h3>
                     <h4 class="tm-title-gray mb-4" th:text="|Rating: *{rating}|">Rating</h4>
 

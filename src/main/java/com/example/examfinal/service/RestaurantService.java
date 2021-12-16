@@ -12,7 +12,6 @@ public interface RestaurantService {
 
     RestaurantDetailsView findById(Long id);
 
-    void deleteRestaurants(Long id);
 
 
 }

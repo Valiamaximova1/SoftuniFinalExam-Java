@@ -39,6 +39,7 @@ public class CityServiceImpl implements CityService {
         this.userRepository = userRepository;
     }
 
+
     @Override
     public void initializeCities() {
         if (cityRepository.count() == 0) {
@@ -46,7 +47,7 @@ public class CityServiceImpl implements CityService {
 
             city.setCapitalOrNot(CapitalOrNot.CAPITAL);
             city.setName("Sofia");
-            city.setImageUrl("https://lp-cms-production.imgix.net/features/2018/02/Aleksander-Nevski-Cathedral-Sofia-6303650c1b02.jpg");
+            city.setImageUrl("https://www.aviontourism.com/images/1200-628-Crop/c979445e-9ed5-43e8-ae04-e6149fb8eb31");
             city.setYear(1950);
             city.setMayor("Yordanka Asenova Fandakova");
             city.setAreaOfBg(AreaOfBg.SOUTH);
@@ -56,7 +57,7 @@ public class CityServiceImpl implements CityService {
             CityEntity city1 = new CityEntity();
             city1.setCapitalOrNot(CapitalOrNot.CITY);
             city1.setName("Varna");
-            city1.setImageUrl("https://i2.wp.com/madamebulgaria.com/wp-content/uploads/2017/10/Plovdiv-cov.jpg?fit=1081%2C600&ssl=1");
+            city1.setImageUrl("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4d/45/a5/varna.jpg?w=700&h=500&s=1");
             city1.setYear(1940);
             city1.setMayor("Ivan Portnih");
             city1.setAreaOfBg(AreaOfBg.EAST);

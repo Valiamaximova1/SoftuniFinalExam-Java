@@ -43,7 +43,7 @@ public class CommentServiceImpl implements CommentService {
                 orElseThrow(() -> new ObjectNotFoundException("User with eamil " + commentServiceModel.getCreator() + " not found!"));
 
         Comment newComment = new Comment();
-        newComment.setApproved(false);
+        newComment.setApproved(true);
         newComment.setTextContent(commentServiceModel.getMessage());
         newComment.setCreated(Instant.now());
         newComment.setPlace(place);

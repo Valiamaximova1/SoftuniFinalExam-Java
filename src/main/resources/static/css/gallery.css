@@ -10,6 +10,11 @@
     /*position: fixed;*/
     display: block;
 }
+.comments {
+    grid-column: 1/4;
+    grid-row: 4;
+
+}
 
 /* Hide the images by default */
 .mySlides {

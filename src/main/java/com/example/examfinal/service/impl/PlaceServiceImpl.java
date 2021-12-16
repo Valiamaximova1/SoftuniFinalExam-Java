@@ -56,7 +56,7 @@ public class PlaceServiceImpl implements PlaceService {
             PlaceEntity ndk = new PlaceEntity();
             ndk.setName("NDK");
             ndk.setDescription("The National Palace of Culture, located in Sofia, the capital of Bulgaria, is the largest, multifunctional conference and exhibition centre in south-eastern Europe. It was opened in 1981 in celebration of Bulgaria's 1300th anniversary.");
-            ndk.setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/fa/Emona-Evgord.jpg");
+            ndk.setImageUrl("https://www.novinite.com/media/images/2017-01/photo_verybig_178274.jpg");
             ndk.setRating(RatingEnum.VERY_GOOD);
             ndk.setType(NameType.CULTURE_AND_ART);
             ndk.setCity(cityRepository.findByName("Sofia").orElse(null));

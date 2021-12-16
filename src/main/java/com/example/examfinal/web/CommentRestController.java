@@ -43,7 +43,7 @@ public class CommentRestController {
     public ResponseEntity<CommentViewModel> newComment(
             @AuthenticationPrincipal UserDetails principal,
             @PathVariable Long placeId,
-            @Valid NewCommentBindingModel newCommentBindingModel
+            @RequestBody @Valid NewCommentBindingModel newCommentBindingModel
     ) {
         CommentServiceModel serviceModel =
                 modelMapper.map(newCommentBindingModel, CommentServiceModel.class);

@@ -1,18 +1,22 @@
 package com.example.examfinal.service.impl;
 
 
+import com.example.examfinal.model.entity.CityEntity;
 import com.example.examfinal.model.entity.Restaurant;
+import com.example.examfinal.model.entity.UserEntity;
+import com.example.examfinal.model.entity.UserRoleEntity;
 import com.example.examfinal.model.entity.enums.PriceEnum;
 import com.example.examfinal.model.entity.enums.RestaurantType;
+import com.example.examfinal.model.entity.enums.UserRoleEnum;
 import com.example.examfinal.model.view.RestaurantDetailsView;
 import com.example.examfinal.model.view.RestaurantViewModel;
 import com.example.examfinal.repository.CityRepository;
 import com.example.examfinal.repository.RestaurantRepository;
+import com.example.examfinal.repository.UserRepository;
 import com.example.examfinal.service.RestaurantService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import javax.print.attribute.standard.PageRanges;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
@@ -23,11 +27,13 @@ public class RestaurantServiceImpl implements RestaurantService {
     private final RestaurantRepository restaurantRepository;
     private final CityRepository cityRepository;
     private final ModelMapper modelMapper;
+    private final UserRepository userRepository;
 
-    public RestaurantServiceImpl(RestaurantRepository restaurantRepository, CityRepository cityRepository, ModelMapper modelMapper) {
+    public RestaurantServiceImpl(RestaurantRepository restaurantRepository, CityRepository cityRepository, ModelMapper modelMapper, UserRepository userRepository) {
         this.restaurantRepository = restaurantRepository;
         this.cityRepository = cityRepository;
         this.modelMapper = modelMapper;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -87,12 +93,6 @@ public class RestaurantServiceImpl implements RestaurantService {
         RestaurantDetailsView restaurantDetailsView = this.restaurantRepository.findById(id).map(this::restaurantDetailsView).get();
         return restaurantDetailsView;
     }
-
-    @Override
-    public void deleteRestaurants(Long id) {
-        restaurantRepository.deleteById(id);
-    }
-
 
 
 

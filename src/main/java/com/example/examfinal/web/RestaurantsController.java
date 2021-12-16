@@ -1,5 +1,6 @@
 package com.example.examfinal.web;
 import com.example.examfinal.service.RestaurantService;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,14 +10,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class RestaurantsController {
     private final RestaurantService restaurantService;
+    private final ModelMapper modelMapper;
 
-    public RestaurantsController(RestaurantService restaurantService) {
+    public RestaurantsController(RestaurantService restaurantService, ModelMapper modelMapper) {
         this.restaurantService = restaurantService;
+        this.modelMapper = modelMapper;
     }
 
     @GetMapping("/restaurants/all")
     public String allPlaces(Model model) {
-        model.addAttribute("restaurants", restaurantService.getAllRestaurants());
+        model.addAttribute("restaurantsAll", restaurantService.getAllRestaurants());
         return "restaurants";
     }
 
@@ -27,12 +30,12 @@ public class RestaurantsController {
         return "restaurants-details";
     }
 
-    @DeleteMapping("/restaurants/{id}")
-    public String deleteRestaurants(@PathVariable Long id) {
-        restaurantService.deleteRestaurants(id);
 
-        return "redirect:/restaurants/all";
-    }
+
+
+
+
+
 
 
 
