@@ -46,7 +46,7 @@
                         <label for="capitalOrNot">Capital or not</label>
                         <select th:errorclass="is-invalid" id="capitalOrNot" name="capitalOrNot">
                             <option value="">- Select capital Or not -</option>
-                            <option th:each="c : ${T(com.example.finalsoftuniprojectplaces.model.entity.enums.CapitalOrNot).values()}"
+                            <option th:each="c : ${T(com.example.examfinal.model.entity.enums.CapitalOrNot).values()}"
                                     th:text="${c}" th:value="${c}" th:selected="${c} == *{capitalOrNot}">Capital Or not
                             </option>
                         </select>
@@ -58,7 +58,7 @@
                         <label for="areaOfBg">Area Of Bg</label>
                         <select th:errorclass="is-invalid" id="areaOfBg" name="areaOfBg">
                             <option value="">- Select area of Bulgaria -</option>
-                            <option th:each="c : ${T(com.example.finalsoftuniprojectplaces.model.entity.enums.AreaOfBg).values()}"
+                            <option th:each="c : ${T(com.example.examfinal.model.entity.enums.AreaOfBg).values()}"
                                     th:text="${c}" th:value="${c}" th:selected="${c} == *{areaOfBg}">area Of Bg
                             </option>
                         </select>
